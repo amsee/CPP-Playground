@@ -11,14 +11,14 @@ class Animal
     int nostrils;
 
     // list functions
-  private:
+public:
     void blinking()
     {
-      cout << "I'm blinking" << endl; << 
+      cout << "I'm blinking" << endl;
     }
     void sniffing()
     {
-      cout << "I'm sniffing" << endl; << 
+      cout << "I'm sniffing" << endl; 
     }
 };
 
