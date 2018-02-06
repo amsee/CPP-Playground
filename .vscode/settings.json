@@ -4,6 +4,7 @@
         "__locale": "cpp",
         "ios": "cpp",
         "memory": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "iostream": "cpp"
     }
 }
