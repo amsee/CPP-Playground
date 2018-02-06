@@ -15,7 +15,7 @@ int main()
     // ask user for first input 
     cout << "Enter 1st num = ";
     cin >> diamond; 
-    // ask user for second input
+    // User inputs an integer
     cout << "Enter 2nd num = ";
     cin >> heart;
     // ask user for third input
