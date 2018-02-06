@@ -1,35 +1,34 @@
-// CLASS -> blueprint for an object
-
+// import library
 #include <iostream>
 using namespace std;
 
-// basically a huge variable that contains other variables
-class Animal
+// create class
+class Person
 {
-    // list properties
-    int eyes;
-    int nostrils;
+// class properties
+// public/private
 
-    // list functions
-  public:
-    void blinking()
+private:
+    int hands;
+    int feet;
+
+// class functions
+public:
+    void fingers()
     {
-      cout << "I'm blinking" << endl;
+        cout << "Sticky Hands" << endl;
     }
-    void sniffing()
+    void toes()
     {
-      cout << "I'm sniffing" << endl;
+        cout << "Sickie Feet" << endl;
     }
 };
-
 // main function
 int main()
 {
-    // Create an animal object
-    Animal wolf;
-    wolf.blinking();
-    wolf.sniffing();
+    Person mouse;
+    mouse.fingers();
+    mouse.toes();
 
-    // return integer
     return 0;
 }
