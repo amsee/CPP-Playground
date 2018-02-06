@@ -17,7 +17,7 @@ int main()
     cin >> b;   
     // before swap
     cout << "Before Address swap " << endl;
-    cout << "1: " << a << " 2:" << b << endl;
+    cout << "1: " << a << " 2: " << b << endl;
 
     // Pass the ADDRESSES of a and b to the function swap
     change(&a, &b);
