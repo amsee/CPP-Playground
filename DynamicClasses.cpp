@@ -7,11 +7,12 @@ class Animal
 private:// Animal Properties
   int eyes;
   int feet;
-public:
 
-  // get information about Animal
-  void get(int e, int f) const
+public:
+  // get information about Animal 
+  void get() const
   {
+    //   display information to user
     cout << "This animal has " << e << "eyes.";
     cout << "This animal has " << f << "feet";
   }
