@@ -1,4 +1,8 @@
 // import library (2)
+  //!hello 
+    //*2
+    //?d 
+    //todo 
 #include <iostream>
 #include <cstring>
 using namespace std;
