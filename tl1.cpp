@@ -1,4 +1,8 @@
 // import library (2)
+  //!hello
+    //*2
+    //?d
+    //todo
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -17,7 +21,7 @@ class Candy
             cout << "This is a " << candy_type << "type of candy." << endl;
             cout << "It costs " << candy_price << "." << endl;
     }
-        void set(const char *ct, int cp) const // locate address for strings only
+        void set(const char *ct, int cp) // locate address for strings only
     {
         // copy strings
         strcpy(candy_type, ct);
@@ -32,6 +36,8 @@ int main()
     int count = 0;
     // user output
     cout << "How many candies can you eat?: " << endl;
+    cin >> count;
+    cout << "So, you can fit " << count << " candies in your stomach." << endl;
     // user input
     cin >> count;
     // create an array
