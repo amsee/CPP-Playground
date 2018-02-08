@@ -2,22 +2,22 @@
 #include <iostream>
 using namespace std;
 
-// create class
+// define class
 class Frog
 {
-
-Private:
+private:
 // list properties
     int spots;
     int webs;
 
 // list functions
-Public:
+public: 
     void jump()
     {
         cout << "This frog jumps." << endl;
     }
     void fly()
+    {
         cout << "This frog can fly." << endl;
     }
 };
@@ -25,8 +25,7 @@ Public:
 
 // main functions
 int main()
-
-{
+{ 
     Frog super;
     super.jump();
     super.fly();
