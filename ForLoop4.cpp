@@ -24,8 +24,8 @@ class Cookies
     // todo Display information about cookies
     void display_information() const
     {
-        cout << "Cookie Type = " << endl;
-        cout << "Amount of Cookies = " << endl;
+        cout << "Cookie Type = " << CookieType << endl;
+        cout << "Amount of Cookies = " << CookieAmount << endl;
     }
     // todo set variables for class
     // * assign variables
@@ -79,6 +79,6 @@ int main()
       cout << "===" << "Cookie # " << i + 1 << "===" << endl;
       cookies[i].display_information(); // todo -> DISPLAY
     // * return integer
-    return 0;
     }
+    return 0;
 }
