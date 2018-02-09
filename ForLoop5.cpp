@@ -18,8 +18,8 @@ class Tutor
 // * display information
         void get_info() const //! get == (void)
         {
-            cout << "What's your speciality?" << speciality << endl; 
-            cout << "What's your program?" << program << endl;
+            cout << "What's your speciality? " << speciality << endl; 
+            cout << "What's your program? " << program << endl;
         }
 // todo     set variables
 // * assign variables
