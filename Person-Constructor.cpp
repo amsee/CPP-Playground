@@ -1,4 +1,7 @@
+// * include library
+// * standard lib
 #include <iostream>
+// * c string lib
 #include <cstring>
 
 using namespace std;
@@ -6,19 +9,21 @@ using namespace std;
 // Create Class called Person
 class Person
 {
+    // * list properties
     private:
-    int eyes;
-    int feet;
-    char name[10];
+        int eyes;
+        int feet;
+        char name[10];
 
+    // * list constructors
     public:
     // Default eyes and feet to empty states (0 or null)
-    Person()
-    {
-        eyes = 0;
-        feet = 0;
-        name[0] = '\0'; // set name to be empty
-    }
+        Person()
+        {
+            eyes = 0;
+            feet = 0;
+            name[0] = '\0'; // set name to be empty
+        }
 
     // Default eyes and feet based on passed values
     Person(int e, int f, const char* n)
