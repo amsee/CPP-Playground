@@ -6,31 +6,32 @@ class Drink
 {
     private:
         int price;
-        char size;
+        char size[10];
     public:
         Drink()           //todo PARAMETER CONTSRUCTOR
         {
             price = 0;
-            size[0] = '\0'
+            size[0] = '\0';
         }
     Drink(int p, const char* s) //todo DEFAULT CONSTRUCTOR 
     {
         price = p;
         strcpy(size, s);
     }
-    void GetInfo() const
+    void getInfo() const
     {
-        cout << "Enter Price: " << price << endl;
-        cout << "Enter Size: " << size << endl;
+        // todo DISPLAY PROPERTIES
+        cout << "Display Price: " << price << endl;
+        cout << "Display Size: " << price << endl;
     }
 };
 int main(void)
 {
     Drink cold;               // todo CALL DEFAULT CONSTRUCTOR
-    Drink warm(3, 's');       // todo CALL PARAMETER CONSTRUCTOR
+    Drink warm(3, "small");       // todo CALL PARAMETER CONSTRUCTOR
 
-    cold.GetInfo();
-    warm.GetInfo();
+    cold.getInfo();
+    warm.getInfo();
 
     return 0;
 }   
