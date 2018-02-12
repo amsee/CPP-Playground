@@ -44,7 +44,7 @@ class Animal
 int main(void)
 {
     Animal warm;
-    Animal cold( 2, "cold");
+    Animal cold(2, "cold");
 
     warm.getEyes();
     cold.getSpecies();
