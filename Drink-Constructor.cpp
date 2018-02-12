@@ -1,36 +1,36 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 class Drink
 {
     private:
-        char size;
         int price;
-    public:                     //? initialize variables to null
-        Drink()
+        char size;
+    public:
+        Drink()           //todo PARAMETER CONTSRUCTOR
         {
-            char size = 0;
             price = 0;
+            size[0] = '\0'
         }
-        Drink(const char* s, int p) //? assign/set variables
-        {
-            strcpy(size, s);
-            price = p;
-        }
-    void get_size(void) const           //? get/display information
-        {
-            cout << "What size tea?: " << size << endl;
-        }
-    void get_price(void) const
-        {
-            cout << "What is Price?: " << price << endl;
-        }
+    Drink(int p, const char* s) //todo DEFAULT CONSTRUCTOR 
+    {
+        price = p;
+        strcpy(size, s);
+    }
+    void GetInfo() const
+    {
+        cout << "Enter Price: " << price << endl;
+        cout << "Enter Size: " << size << endl;
+    }
 };
 int main(void)
 {
-    Drink warm;
-    Drink cold;
+    Drink cold;               // todo CALL DEFAULT CONSTRUCTOR
+    Drink warm(3, 's');       // todo CALL PARAMETER CONSTRUCTOR
 
-    warm.get_size();
-    cold.get_price();
-}
+    cold.GetInfo();
+    warm.GetInfo();
+
+    return 0;
+}   

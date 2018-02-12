@@ -14,6 +14,10 @@ class Person
         {
             eyes = e;
         }
+        void getEyes(void) const
+        {
+            cout << "How many eyes do you have? " << eyes << endl;
+        }
 };
 int main()
 {
