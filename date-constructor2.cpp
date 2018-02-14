@@ -24,28 +24,24 @@ class Date
         {
             day = d;
         }
-        if((year >= 2000)&&(year <= 3000))
+        if((year >= 2000)&& (year <= 3000))
         {
             year = y;
         }
     }
-    void displayInfo(void) const
+    void displayInfo(void) const 
     {
-        cout << "The month is: " << month << endl;
+        cout << "The month is: "  << month << endl;
         cout << "The day is: "  << day << endl;
         cout << "The year is: " << year << endl;
     }
 };
 int main(void)
 {
-    Date holiday;
-    Date f(4, 14, 2018);
+    Date holiday; //! call default constructor
+    Date f(4, 14, 2018); // ! call parameter constructor
 
-    f.Date(m, d, y);
-
-    m.displayInfo();
-    d.displayInfo();
-    y.displayInfo();
+    f.displayInfo();
 
     return 0;
 }
