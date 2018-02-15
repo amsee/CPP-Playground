@@ -1,35 +1,39 @@
 #include <iostream>
 using namespace std;
 
-class Paper
+class Piano
 {
     private:
-        int length;
-        int width;
+        int BlackKeys; //52
+        int WhiteKeys; //36
     public:
-    Paper(void)
+    Piano(void)
     {
-        length = 0;
-        width = 0;
+        BlackKeys = 0;
+        WhiteKeys = 0;
     }
-    Paper(int l, int w)
+    Piano(int bk, int wk)
     {
-        if(length == 11)
+        if (BlackKeys == 52)
         {
-            length = l;
+            BlackKeys = bk;
         }
-        if(width = 8)
+        if (WhiteKeys == 36)
         {
-            width = w;
+            WhiteKeys = wk;
         }
     }
-    void DisplayInfo() const 
+    void DisplayInfo(void) const
     {
-        cout << "Is length of paper 11 inches? " << endl;
-        cout << "Is width of paper 8 inches? " << endl;
+        cout << "How many black keys are there? " << BlackKeys << endl;
+        cout << "How many white keys are there? " << WhiteKeys << endl;
     }
 };
 int main(void)
 {
-    piano.
+    Piano *keys;
+    Piano k(52, 36);
+    cout << "Piano Keys" << endl;
+    k.DisplayInfo();
+    return 0;
 }
