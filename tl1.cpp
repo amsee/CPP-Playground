@@ -1,51 +1,56 @@
 #include <iostream>
 using namespace std;
 
-class Date
+class Sides
 {
     private:
-        int month;
-        int day;
-        int year;
+        int guests;
+        char app[30];
+        char main[30];
+        char dessert[30];
+
     public:
-    Date(void)                         //! DEFAULT CONSTRUCTOR
-    {
-        month = 0;
-        day = 0;
-        year = 0;
-    }
-    Date(int m, int d, int y)          //! PARAMETER CONSTRUCTOR
-    {
-        if((month >= 1)&&(month <=12))
+    // ! default constructor
+        Sides(void)
         {
-            month = m;
+            app[0] = '\0';
+            main[0] = '\0';
+            dessert[0] = '\0';
         }
-        if((day >=1 )&&(day<=31))
+    // ! parameter constructor
+        Sides(int gu, const char* p, const char* b, const char* n)
         {
-            day = d;
+            if((guests >= 30) && (guests <= 300))
+            {
+                guests = gu;
+            }
+            if (app == p)
+            {
+                strcpy(app, p);
+                cout << "yes";
+            }
+            if (main == b)
+            {
+                strcpy(main, b);
+            }
+            if (dessert == n)
+            {
+                strcpy(dessert, n);
+            }
         }
-        if((year >= 2000)&&(year <= 3000))
+        void DisplayInfo() const
         {
-            year = y;
+            cout << "How many guests? -> " << guests << endl;
+            cout << "Pick an Appetizer -> " << app << endl;
+            cout << "Pick a Main -> " << main << endl;
+            cout << "Pick a Dessert -> " << dessert << endl;
         }
-    }
-    void displayInfo(void) const
-    {
-        cout << "The month is: " << month << endl;
-        cout << "The day is: "  << day << endl;
-        cout << "The year is: " << year << endl;
-    }
 };
-int main(void)
+int main (void)
 {
-    Date holiday;
-    Date f(4, 14, 2018);
-
-    f.Date(m, d, y);
-
-    m.displayInfo();
-    d.displayInfo();
-    y.displayInfo();
-
+    Sides *party;
+    Sides f(25, "Pasta", "Bread", "Noodles");
+    cout << "Party." << endl;
+    f.DisplayInfo();
     return 0;
 }

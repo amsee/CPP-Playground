@@ -8,22 +8,37 @@ class Sides
         char app[30];
         char main[30];
         char dessert[30];
+    
     public:
-
-        Sides(void)
+    // ! default constructor 
+        Sides(void) 
         {
+            guests = 0;
             app[0] = '\0';
             main[0] = '\0';
             dessert[0] = '\0';
         }
-        Sides(int gu, const char* a, const char* m, const char* d)
+    // ! parameter constructor 
+        Sides(int gu, const char* p, const char* b, const char* n)
         {
-            guests = gu;
-            strcpy(app, a);
-            strcpy(main, m);
-            strcpy(dessert, d);
+            if((guests >= 30) && (guests <= 300))
+            {
+                guests = gu;
+            }
+            if (app == p)
+            {
+                strcpy(app, p);
+            }
+            if (main == b)
+            {
+                strcpy(main, b);
+            }
+            if (dessert == n)
+            {
+                strcpy(dessert, n);
+            }
         }
-        void DisplayInfo() const
+        void displayInfo(void) const
         {
             cout << "How many guests? -> " << guests << endl;
             cout << "Pick an Appetizer -> " << app << endl;
@@ -34,8 +49,8 @@ class Sides
 int main (void)
 {
     Sides *party;
-    Sides f(25, "Calamari", "Steak", "Brule");
+    Sides f(25, "Pasta", "Bread", "Noodles");
+    
     cout << "Party." << endl;
-    f.DisplayInfo();
     return 0;
 }
