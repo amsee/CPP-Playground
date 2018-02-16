@@ -43,7 +43,7 @@ class Fish
             frog = f;
         }
     }
-    void DisplayInfo(void)
+    void DisplayInfo(void) const
     {
         cout << "# of Goldfish : " << goldfish << endl;
         cout << "# of Guppy : " << guppy << endl;

@@ -29,7 +29,7 @@ class Holiday
             valentines = v;
         }
     }
-    void DisplayInformation(void)
+    void DisplayInformation(void) const
     {
         cout << "What day is Thanksgiving on? " << thanksgiving << endl;
         cout << "What day is Christmas on? " << christmas << endl;
