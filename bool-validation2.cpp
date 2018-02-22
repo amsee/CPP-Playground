@@ -24,14 +24,14 @@ class Book
             *this = Book(); // * call?
             InvalidMessage();
         }
-        void ValidMessage(void) const
-        {
-            cout << "This is the right book." << endl;
-        }
-        void InvalidMessage(void) const 
-        {
-            cout << "This is the wrong book." << endl;
-        }
+    }
+    void ValidMessage(void) const
+    {
+        cout << "This is the right book." << endl;
+    }
+    void InvalidMessage(void) const 
+    {
+        cout << "This is the wrong book." << endl;
     }
 };
 int main(void)
