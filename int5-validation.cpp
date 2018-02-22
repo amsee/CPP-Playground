@@ -1,42 +1,45 @@
 #include <iostream>
 using namespace std;
 
-class Event
+class Fingers
 {
-    private:
-        int guests;
-        int grade;
+    int numberOfFingers;
 
-    public:
-    Event(void)
+  public:
+    Fingers()
     {
-        guests = 25;
-        grade = 12;
+        numberOfFingers = 5;
     }
-    Event(int g1, int g2)
+    Fingers(int number)
     {
-        if (guests == 25)
+        // Check if fingers is == 5 or less if more, it's abnormal
+        bool valid = number == 5 || number == 4 || number == 3 || number == 2 || number == 1;
+        if (valid)
         {
-            cout << guests << endl;
+            numberOfFingers = number;
         }
-        if (grade == 12)
+        else
         {
-            cout << grade << endl;
+          // if there are more than 5 Fingers
+          cout << "You're not normal" << endl;
+
+          // Run the first constructor to make number == 5
+          *this = Fingers();
         }
     }
-    void DisplayInfo(void) const
+    void Display(void) const
     {
-        cout << "Enter Guests: " << guests << endl;
-        cout << "Enter Grade: " << grade << endl;
+        cout << "Amount of fingers: " << numberOfFingers << endl;
     }
 };
+
 int main(void)
 {
-    Event *grad;
-    Event e(25, 12);
+    Fingers f(5);
+    Fingers v(10);
 
-    e.DisplayInfo();
-    cout << "You are invited to the event." << endl;
+    f.Display();
+    v.Display();
 
     return 0;
 }
