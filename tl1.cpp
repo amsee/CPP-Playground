@@ -1,43 +1,49 @@
-// todo Vehicle (check if wheels are 2 wheels, 4 wheels or more than 4, if it's 2 wheels, print out motorcycle, if it's 4 print out car, if it's more, print out truck)
+// todo -- Grade (check  if the letter is A, B, C, D, or F
 
 #include <iostream>
 using namespace std;
 
-class Vehicle
+class Grade
 {
     private:
-        int wheels;
-
+        char letter;
     public:
-    Vehicle(void)
+    Grade(void)
     {
-        wheels = 2;
+
+      // TODO: let letter = '\0'
+        letter = '\0';
     }
-    Vehicle(int w)
+
+    // const char* is only for strings
+    Grade(char l)
     {
-        bool valid = w == 4 || w == 3 || w == 2 || w == 1;
-        if (w <= 2)
+        bool valid = l == 'A' || l == 'B' || l == 'C' || l == 'D' || l == 'F';
+        if (valid)
         {
-            cout << "Motorcycle" << endl;
-        }
-        if (w <= 4)
-        {
-            cout << "Car" << endl;
+            letter = l;
+            DisplayInfo();
         }
         else
         {
-            cout << "Truck" << endl;
+            *this = Grade();
+            cout << "The grade is not valid" << endl;
         }
-        *this = Vehicle();
     }
     void DisplayInfo(void) const
     {
-        cout << "Enter # of Wheels on Vehicle: " << wheels << endl;
+        cout << "Valid Grade" << endl;
     }
 };
 int main(void)
 {
-    Vehicle f(4);
-    f.DisplayInfo();
+    // letter does not exist within this scope
+    // TODO: Make letter exist in this scope
+    char letter;
+    cout << "Enter Grade: " << endl;
+    cin >> letter;
+
+    Grade g(letter);
+
     return 0;
 }
