@@ -4,39 +4,42 @@ using namespace std;
 
 class Book
 {
-    private: 
+    private:
         int pages;
-
     public:
     Book(void)
     {
-        pages = 10;
+        pages = 0;
     }
-    Book(int number)
+    Book(int p)
     {
-        bool valid = number == 10 || number == 9 || number == 8 || number == 7 || number == 6 || number == 5 || number == 4 || number == 3 || number == 2 || number == 1;
+        bool valid = p == 10 || p == 9 || p == 8 || p == 7 || p == 6 || p == 5 || p == 4 || p == 3 || p == 2 || p == 1;
         if (valid)
         {
-            pages = number;
+            pages = p;
+            ValidMessage();
         }
-        else 
+        else
         {
-            cout << "This is not the right book." << endl;
-            *this = Book();
+            *this = Book(); // * call?
+            InvalidMessage();
         }
-    }
-    void DisplayInfo(void) const 
-    {
-        cout << "Enter Number of Pages: " << endl;
+        void ValidMessage(void) const
+        {
+            cout << "This is the right book." << endl;
+        }
+        void InvalidMessage(void) const 
+        {
+            cout << "This is the wrong book." << endl;
+        }
     }
 };
 int main(void)
 {
-    Book f(10);
+    int pages;
+    cout << "Enter # of Pages: " << endl;
+    cin >> pages;
 
-    f.DisplayInfo();
+    Book b(pages);
     return 0;
 }
-
-
-

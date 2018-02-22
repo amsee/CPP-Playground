@@ -1,49 +1,39 @@
-// todo -- Grade (check  if the letter is A, B, C, D, or F
-
+// todo - Book (check if there are more than 10 pages for the book to be valid)
 #include <iostream>
 using namespace std;
 
-class Grade
+class Book
 {
     private:
-        char letter;
+        int pages;
+
     public:
-    Grade(void)
+    Book(void)
     {
-
-      // TODO: let letter = '\0'
-        letter = '\0';
+        pages = 10;
     }
-
-    // const char* is only for strings
-    Grade(char l)
+    Book(int number)
     {
-        bool valid = l == 'A' || l == 'B' || l == 'C' || l == 'D' || l == 'F';
+        bool valid = number == 10 || number == 9 || number == 8 || number == 7 || number == 6 || number == 5 || number == 4 || number == 3 || number == 2 || number == 1;
         if (valid)
         {
-            letter = l;
-            DisplayInfo();
+            pages = number;
         }
         else
         {
-            *this = Grade();
-            cout << "The grade is not valid" << endl;
+            cout << "This is not the right book." << endl;
+            *this = Book();
         }
     }
     void DisplayInfo(void) const
     {
-        cout << "Valid Grade" << endl;
+        cout << "Enter Number of Pages: " << endl;
     }
 };
 int main(void)
 {
-    // letter does not exist within this scope
-    // TODO: Make letter exist in this scope
-    char letter;
-    cout << "Enter Grade: " << endl;
-    cin >> letter;
+    Book f(10);
 
-    Grade g(letter);
-
+    f.DisplayInfo();
     return 0;
 }
