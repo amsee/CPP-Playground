@@ -57,9 +57,9 @@ int main(void)
     int wheels;
 
     cout << "# of wheels on Vehicle: " << endl;
-    cin >> wheel;
+    cin >> wheels;
 
-    Vehicle v(wheel);
+    Vehicle v(wheels);
 
     v.DisplayInfo();
 
