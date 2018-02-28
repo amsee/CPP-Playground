@@ -1,5 +1,6 @@
 #include <iostream>
 #include "graph.h"
+#include "tools.h"
 using namespace std;
 
 namespace Senegraph
